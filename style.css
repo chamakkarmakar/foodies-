@@ -324,6 +324,28 @@ h2 {
             background: #4caf50;
             color: white;
         }
+/* Veggie Foods Section */
+.veggies {
+    
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('assets/background-img.png') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
+}
+.veg-content h2 {
+    margin: 80px 180px;
+    color: white;
+    font-size: 48px;
+    
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -374,6 +396,10 @@ h2 {
     img {
         width: 100%;
 
+    }
+    .veg-content h2 {
+        font-size: 32px;
+        margin: 60px 0;
     }
 
  }
