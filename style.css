@@ -15,7 +15,7 @@ body {
 header {
     background-color: #F3FCF7;
     padding: 10px 0;
-    
+    position: sticky;
 }
 nav {
     display: flex;
@@ -77,3 +77,62 @@ nav h1 {
         display: flex;
     }
  }
+
+ /* Hero Section */
+ .hero {
+    background: #F3FCF7;
+    padding: 60px 0;
+ }
+ .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+ }
+ .hero-text h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+ }
+ .hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+ }
+ .btn {
+    width: 200px;
+    height: 68px;
+    background-color: #06C167;
+    color: #F3FCF7;
+    padding: 16px 32px;
+    cursor: pointer;
+    text-decoration: none;
+ }
+.btn:hover {
+    background-color: #05A655;
+}
+.hero-image img {
+    width: 468px;
+    height: 634px;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+/* Logo Section */
+        .logo-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .logo-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        .partner-logo {
+            opacity: 0.4;
+            font-size: 24px;
+            font-weight: 600;
+            color: #999;
+            letter-spacing: 2px;
+        }
