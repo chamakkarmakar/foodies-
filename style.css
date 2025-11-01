@@ -85,14 +85,14 @@ nav h1 {
  }
  .hero-text p {
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
  }
  .btn {
     width: 200px;
     height: 68px;
     background-color: #06C167;
     color: #F3FCF7;
-    padding: 16px 32px;
+    padding: 20px 32px;
     cursor: pointer;
     text-decoration: none;
  }
@@ -102,8 +102,7 @@ nav h1 {
 .hero-image img {
     width: 468px;
     height: 634px;
-    border-radius: 15px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    
 }
 /* Logo Section */
         .logo-section {
@@ -178,9 +177,13 @@ hr {
     font-size: 12px;
 }
 /* benefits section  */
+.benefits {
+   margin: 60px 0;
+}
 .benefits-content {
     display: flex;
     align-items: center;
+    flex-direction: row;
     gap: 100px;
 }
 .benefits-image{
@@ -194,11 +197,11 @@ hr {
     width: 400px;
     height: 480px;
 }
-.benefits-text span {
+span {
     font-size: 15px;
-  
+    color: #1D1D1F;
 }
-.benefits-text h2 {
+h2 {
     font-size: 60px;
     margin: 20px 0;
 }
@@ -208,8 +211,40 @@ hr {
     font-size: 15px;
 }
 
+/* Our Stars Section  */
+.stars-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+.stars-image img {
+    width: 300px;
+    height: 380px;
+}
+.stars-image{
+    padding-top: 0;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 0;
+    background-color: #F3FAFB;
+}
+.stars {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.stars h4 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #06C167;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
     .nav-links {
         display: none;
     }
@@ -221,12 +256,36 @@ hr {
         flex-direction: column;
         text-align: center;
     }
-
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    
+}
     .logo-grid {
        gap: 40px;
     }
 
     .features-grid {
+       grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+    }
+    h2 {
+    font-size: 40px;
+    margin: 15px 0;
+    }
+    .benefits-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .stars-section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .stars {
         grid-template-columns: 1fr;
     }
+    img {
+        width: 100%;
+
+    }
+    
  }
