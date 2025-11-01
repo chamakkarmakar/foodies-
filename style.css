@@ -68,16 +68,6 @@ nav h1 {
 
 }
 
- @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-    }
- }
-
  /* Hero Section */
  .hero {
     background: #F3FCF7;
@@ -187,3 +177,56 @@ hr {
     color: #999;
     font-size: 12px;
 }
+/* benefits section  */
+.benefits-content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+.benefits-image{
+    padding-top: 0;
+    padding-bottom: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #F3FAFB;
+}
+.benefits-image img {
+    width: 400px;
+    height: 480px;
+}
+.benefits-text span {
+    font-size: 15px;
+  
+}
+.benefits-text h2 {
+    font-size: 60px;
+    margin: 20px 0;
+}
+.benefits-list {
+    list-style: none;
+    line-height: 2.5;
+    font-size: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-grid {
+       gap: 40px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+ }
