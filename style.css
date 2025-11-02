@@ -99,61 +99,139 @@ nav h1 {
 .btn:hover {
     background-color: #05A655;
 }
+
 .hero-image img {
     width: 468px;
     height: 634px;
-    
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.rating-badge {
+    position: absolute;
+    top: 510px;
+    left: 600px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    z-index: 2;
+}
+
+.rating-badge span:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.rating-badge .star {
+    color: #4CAF50;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.quality-badge {
+    position: absolute;
+    top: 300px;
+    right: 80px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.quality-badge .badge-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quality-badge .badge-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.quality-badge span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    /* white-space: nowrap; */
+}
+
+.pattern-decoration {
+    position: absolute;
+    bottom: -120px;
+    right: 130px;
+    width: 150px;
+    height: 150px;
+    background-image: radial-gradient(circle, white 2.5px, transparent 2.5px);
+    background-size: 15px 15px;
+    background-position: 0 0;
+    border-radius: 0 0 20px 0;
+    z-index: 2;
+}
+
+.hero-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 180px;
 }
 /* Logo Section */
-        .logo-section {
-            padding: 60px 0;
-            background: #f8f9fa;
-        }
-
-        .logo-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 80px;
-            flex-wrap: wrap;
-        }
-
-        .partner-logo {
-            opacity: 0.4;
-            font-size: 24px;
-            font-weight: 600;
-            color: #999;
-            letter-spacing: 2px;
-        }
+.logo-section {
+    padding: 60px 0;
+}
+.logo-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.partner-logo {
+    opacity: 0.4;
+    font-size: 20px;
+    font-weight: 600;
+    color: #999;
+    letter-spacing: 2px;
+}
 hr {
     border: none;
     height: 1px;
     background: #e0e0e0;
     margin: 40px 0;
 }
-         /* Features Section */
-        .features {
-            padding: 20px 0;
-            background: white;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .feature-card {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
+ /* Features Section */
+.features {
+    padding: 20px 0;
+    background: white;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+.feature-card {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+}
 
 .feature-icon {
     width: 60px;
@@ -239,345 +317,329 @@ h2 {
     margin-bottom: 10px;
     color: #06C167;
 }
-/* Variety of foods  */
 /* Variety Section */
-        .variety-section {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .variety-section h3 {
-            color: #2e7d32;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .variety-section h2 {
-            font-size: 36px;
-            margin-bottom: 50px;
-            color: #1a1a1a;
-        }
-
-        .variety-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .variety-card {
-            display: flex;
-            flex-direction: row;
-            
-            border-radius: 10px;
-            
-        }
-        .variety-img img{
-            width: 250px;
-            height: 250px;
-        }
-
-        .variety-card-content {
-            padding: 25px;
-            text-align: left;
-        }
-
-        .variety-card h4 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .variety-card p {
-            color: #777;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .discover-link {
-            color: #4caf50;
-            text-decoration: none;
-            font-size: 14px;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-/* Products Section */
-        .products-section {
-            padding: 80px 0;
-        }
-
-        .products-section h3 {
-            color: #2e7d32;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .products-section h2 {
-            font-size: 36px;
-            margin-bottom: 50px;
-            color: #1a1a1a;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .product-card {
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            border-color: #4caf50;
-        }
-
-        .product-image img {
-            width: 150px;
-            height: 150px;
-            border: none;
-            border-radius: 50%;
-        }
-
-        .product-card .star {
-            color: #4caf50;
-            margin-bottom: 10px;
-        }
-
-        .product-card h4 {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .product-card .price {
-            margin-bottom: 15px;
-        }
-
-        .product-card .old-price {
-            color: #999;
-            text-decoration: line-through;
-            margin-right: 10px;
-        }
-
-        .product-card .new-price {
-            color: #4caf50;
-            font-weight: bold;
-        }
-
-        .buy-btn {
-            background: white;
-            color: #4caf50;
-            border: 2px solid #4caf50;
-            padding: 10px 25px;
-            border-radius: 5px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .buy-btn:hover {
-            background: #4caf50;
-            color: white;
-        }
+.variety-section {
+    padding: 80px 0;
+    text-align: center;
+}
+.variety-section h3 {
+    color: #2e7d32;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.variety-section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+}
+.variety-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+.variety-card {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-direction: row;
+}
+.variety-img img{
+    width: 250px;
+    height: 250px;
+    display: block;
+}
+.variety-card-content {
+    padding: 35px;
+    text-align: left;
+    border: 1px solid #27AE60;
+}
+.variety-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.variety-card p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.discover-link {
+    color: #4caf50;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+/* Prodcts Section */
+.products-section {
+    padding: 80px 0;
+}
+.products-section h3 {
+    color: #2e7d32;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.products-section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.product-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #4caf50;
+}
+.product-image img {
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 50%;
+}
+.product-card .star {
+    color: #4caf50;
+    margin-bottom: 10px;
+}
+.product-card h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.product-card .price {
+    margin-bottom: 15px;
+}
+.product-card .old-price {
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.product-card .new-price {
+    color: #4caf50;
+    font-weight: bold;
+}
+.buy-btn {
+    background: white;
+    color: #4caf50;
+    border: 2px solid #4caf50;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.buy-btn:hover {
+    background: #4caf50;
+    color: white;
+}
 /* Veggie Foods Section */
 .veggies {
-    
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border-radius: 10px;
-            overflow: hidden;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('assets/background-img.png') no-repeat center center/cover;
-            background-size: cover;
-            background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(rgba(0,0,0,4), rgba(0,0,0,0.4)), url('assets/background-img.png') no-repeat center ;
+    background-size: cover;
+    background-position: center;
 }
 .veg-content h2 {
     margin: 80px 180px;
     color: white;
     font-size: 48px;
-    
 }
 
  /* Footer */
-        footer {
-            background: #f5f5f5;
-            padding: 60px 0 20px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h3 {
-            color: #4caf50;
-            margin-bottom: 20px;
-            font-size: 18px;
-            /* text-align: center; */
-        }
-
-        .foodies {
-           width: 300px;
-         
-        }
-
-        .footer-section p {
-            color: #777;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-section ul li a {
-            color: #777;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .footer-section ul li a:hover {
-            color: #4caf50;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            width: 35px;
-            height: 35px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .newsletter {
-            display: flex;
-            gap: 10px;
-        }
-
-        .newsletter input {
-            flex: 1;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .newsletter button {
-            background: #4caf50;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #777;
-            font-size: 14px;
-        }
-
+footer {
+    background: #f5f5f5;
+    padding: 60px 0 20px;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer-section h3 {
+    color: #4caf50;
+    margin-bottom: 20px;
+    font-size: 18px;
+    /* text-align: center; */
+}
+.foodies {
+   width: 300px;
+}
+.footer-section p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.footer-section ul {
+    list-style: none;
+}
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+.footer-section ul li a {
+    color: #777;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-section ul li a:hover {
+    color: #4caf50;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.social-links a {
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-decoration: none;
+}
+.newsletter {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.newsletter input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.newsletter button {
+    background: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    color: #777;
+    font-size: 14px;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-    .nav-links {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    
+.container {
+    width: 90%;
 }
-    .logo-grid {
-       gap: 40px;
-    }
-
-    .features-grid {
-       grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
-    }
-    h2 {
+.nav-links {
+    display: none;
+}
+.hamburger {
+    display: flex;
+}
+.hero-content {
+    flex-direction: column;
+    text-align: center;
+}
+.hero-image > img {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+.rating-badge {
+    padding: 8px 15px;
+    font-size: 12px;
+    top: 950px;
+    left: 150px;
+}
+.quality-badge {
+    padding: 0 10px;
+    top: 1000px;
+    right: 150px;
+}
+.pattern-decoration {
+    width: 120px;
+    height: 120px;
+    bottom: -500px;
+    right: 10px;
+    background-size: 12px 12px;
+}
+.logo-grid {
+    flex-direction: column;
+    gap: 40px;
+}
+.features-grid {
+   grid-template-columns: repeat(2, 1fr);
+}
+h2 {
     font-size: 40px;
     margin: 15px 0;
-    }
-    .benefits-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .stars-section {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    .stars {
+}
+.benefits-content {
+    flex-direction: column;
+    text-align: center;
+}
+.benefits-image {
+    padding: 0%;
+}
+.stars-section {
+    flex-direction: column-reverse;
+    text-align: center;
+}
+.stars {
+    grid-template-columns: 1fr;
+}
+.variety-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}       
+.variety-grid {
+    grid-template-columns: 1fr;
+}    
+.products-grid {
         grid-template-columns: 1fr;
     }
-    .variety-card {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }       
-    .variety-grid {
-        grid-template-columns: 1fr;
-    }    
-    .products-grid {
-            grid-template-columns: 1fr;
-        }
-    img {
-        width: 100%;
-
-    }
-    .veg-content h2 {
-        font-size: 32px;
-        margin: 60px 0;
-    }
-    .footer-content {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
-    .footer-section p {
-        text-align: center;
-    }
-    .foodies {
-        width: 100%;
-        text-align: center;
-    }
-    .social-links {
-        justify-content: center;
-    }
-
+img {
+    width: 100%;
+}
+.veg-content h2 {
+    font-size: 32px;
+    margin: 60px 0;
+}
+.footer-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+.footer-section p {
+    text-align: center;
+}
+.foodies {
+    width: 100%;
+    text-align: center;
+}
+.social-links {
+    justify-content: center;
+}
+.newsletter {
+    flex-direction: column;
+}
  }
